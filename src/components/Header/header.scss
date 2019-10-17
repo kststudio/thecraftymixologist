@@ -1,0 +1,18 @@
+header {
+    height: 95vh;
+    background: linear-gradient(
+        rgba(20,20,20, .5), 
+        rgba(20,20,20, .5)),
+        url(../../assets/bartender-martinis.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .feature-msg {
+        text-align: center;
+        color: #fff;
+        h2 {
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+    }
+}

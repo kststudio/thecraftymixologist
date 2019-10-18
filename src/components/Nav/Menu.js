@@ -5,15 +5,15 @@ class Menu extends Component {
     render(){
         return(
             <div id="menu">
-                <ul class="menu-links">
+                <ul className="menu-links">
                     <li>
-                        <a href="#">About</a>
+                        <a href="http://www.google.com">About</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="http://www.google.com">Contact</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="http://www.google.com">Login</a>
                     </li>
                 </ul>
             </div>

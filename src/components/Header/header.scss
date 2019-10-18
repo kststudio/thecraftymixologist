@@ -15,4 +15,10 @@ header {
             text-transform: uppercase;
         }
     }
+    #scroll-down {
+        width: 50px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
 }

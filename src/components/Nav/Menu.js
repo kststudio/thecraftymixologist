@@ -1,22 +1,23 @@
 import React,{ Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 import './nav.scss';
 
 class Menu extends Component {
     render(){
         return(
-            <div id="menu">
-                <ul className="menu-links">
-                    <li>
-                        <a href="http://www.google.com">About</a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com">Contact</a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com">Login</a>
-                    </li>
-                </ul>
-            </div>
+            <Router>
+                <div id="menu">
+                    <ul className="menu-links">
+                        <li>
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link href="/contact">Contact Us</Link>
+                        </li>
+                    </ul>
+                </div>
+            </Router>
         )
     }
 }

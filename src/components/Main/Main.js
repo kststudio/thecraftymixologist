@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import Articles from "../Articles/Articles";
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './main.scss';
+
+import CreatePost from '../Articles/create-post';
 
 class Main extends Component {
     render(){
         return(
             <main>
-                <Articles />
+                <Router>
+                    <Route path="/create" component={ CreatePost } />
+                </Router>
             </main>
         )
     }

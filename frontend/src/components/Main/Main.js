@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './main.scss';
 
-import AllPosts from '../Articles/all-post';
+import AllPosts from '../Articles/All-post';
 
-class Main extends Component {
-    render(){
-        return(
-            <main>
-                <AllPosts />
-            </main>
-        )
-    }
+const Main = () => {
+  return(
+    <main className="container">
+      <div className="row">
+        <div className="col-12 col-md-8">
+          <AllPosts />
+        </div>
+      </div>
+    </main>
+  )
 }
 
 export default Main;

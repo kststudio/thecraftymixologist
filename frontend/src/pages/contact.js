@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer'; 
-import '../App.scss';
+// import '../App.scss';
 
 class Contact extends Component {
     render(){

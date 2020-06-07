@@ -4,8 +4,12 @@ import './aside.scss';
 class Aside extends Component {
     render(){
         return(
-            <aside>
-                <h3>Ths is the aside</h3>
+            <aside className="container">
+                <div className="row">
+                    <div className="col-12 col-md-4">
+                        <h3>This is the aside</h3>
+                    </div>
+                </div>
             </aside>
         )
     }

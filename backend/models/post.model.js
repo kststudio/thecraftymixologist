@@ -6,6 +6,7 @@ const postSchema = new Schema({
     title: { type: String},
     author: { type: String},
     //image: { data: Buffer, contentType: String },
+    excerpt: {type: String},
     content: { type: String },
     //date: { type: Date }
 }, {

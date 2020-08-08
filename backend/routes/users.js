@@ -7,6 +7,13 @@ router.route('/').get((req, res) => {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('admin/users').post((req, res) => {
+  if(err) {
+    console.log(err)
+  }
+  res.redirect('/admin/landing')
+})
+
 router.route('/add').post((req, res) => {
   const firstname = req.body.firstname;
   const lastname = req.body.lastname;

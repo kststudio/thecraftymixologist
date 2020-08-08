@@ -7,7 +7,7 @@ router.route('/').get((req, res) => {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => {
+router.route('/create').post((req, res) => {
   const title = req.body.title;
   const author = req.body.author;
   //const image = req.body.image;
@@ -28,7 +28,7 @@ router.route('/add').post((req, res) => {
 });
 
 router.route('/:id').get((req, res) => {
-    Post.findById(req.params.id)
+    Post.findById(req.params._id)
     .then(post => res.json(post))
     .catch(err => res.status(400).json('Error: ' + err));
 });
@@ -45,12 +45,12 @@ router.route('/update/:id').post((req,res) => {
       .catch(() => res.status(400).json(`Error: ${err}`))
   })
   .catch(() => res.status(400).json(`Error: ${err}`))
-})
+});
 
 router.route('/:id').delete((req, res) => {
   Post.findByIdAndDelete(req.params.id)
   .then(() => res.json('Post deleted'))
   .catch(err => res.status(400).json(`Error: ${err}`))
-})
+});
 
 module.exports = router; 

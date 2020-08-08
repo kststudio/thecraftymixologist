@@ -1,33 +1,34 @@
-import React, { Component } from 'react';
-import Nav from '../components/Nav/Nav';
-import Footer from '../components/Footer/Footer'; 
+import React, { Component } from 'react'
+import Nav from '../components/Nav/Nav'
+import Footer from '../components/Footer/Footer'
 
 class Create extends Component {
-  state = {
-    title: '',
-    author: '',
-    image: '',
-    content: '',
-    date: ''
+  constructor() {
+    super()
+    this.state = {
+      title: '',
+      author: '',
+      image: '',
+      content: '',
+      date: ''
+    }
   }
 
- 
-
   handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState({
       [name]: value
-    });
+    })
 
-    console.log(event.target.value);
+    console.log(event.target.value)
   }
 
   handleSubmitChange = (event) => {
-    console.log(this.state.value);
-    event.preventDefault();
+    console.log(this.state.value)
+    event.preventDefault()
   }
   
   render(){
@@ -71,4 +72,4 @@ class Create extends Component {
   }
 }
 
-export default Create;
+export default Create

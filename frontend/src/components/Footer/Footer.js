@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './footer.scss';
+import React, { Component } from 'react'
+import './footer.scss'
 
 class Footer extends Component {
     render(){
@@ -11,4 +11,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default Footer

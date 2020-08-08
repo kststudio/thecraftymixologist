@@ -1,6 +1,6 @@
-import React from 'react';
-import scroll from '../../assets/scroll.svg';
-import './header.scss';
+import React from 'react'
+import scroll from '../../assets/scroll.svg'
+import './header.scss'
 
 const Header = () => {
     return(
@@ -18,4 +18,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default Header

@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import DatePicker from 'react-datepicker';
-import '../../../node_modules/react-datepicker/dist/react-datepicker.css';
+import React, { Component } from 'react'
+import DatePicker from 'react-datepicker'
+import '../../../node_modules/react-datepicker/dist/react-datepicker.css'
 import axios from "axios"
 
 class CreatePost extends Component {
     constructor(props){
-        super(props);
+        super(props)
 
-        this.onChangeTitle = this.onChangeTitle.bind(this);
-        this.onChangeAuthor = this.onChangeAuthor.bind(this);
-        this.onChangeImage = this.onChangeImage.bind(this);
-        this.onChangeContent = this.onChangeContent.bind(this);
-        this.onChangeDate = this.onChangeDate.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.onChangeTitle = this.onChangeTitle.bind(this)
+        this.onChangeAuthor = this.onChangeAuthor.bind(this)
+        this.onChangeImage = this.onChangeImage.bind(this)
+        this.onChangeContent = this.onChangeContent.bind(this)
+        this.onChangeDate = this.onChangeDate.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
 
         this.state = {
             title: '',
@@ -53,7 +53,7 @@ class CreatePost extends Component {
         })
     }
     onSubmit(e){
-        e.preventDefault();
+        e.preventDefault()
 
         const post = {
             title: this.state.title,
@@ -66,9 +66,7 @@ class CreatePost extends Component {
         console.log(post);
 
         axios.post('http://localhost:5000/posts/add', post)
-            .then(res => console.log(res.data));
-
-        // window.location = '/';
+            .then(res => console.log(res.data))
     }
 
     render(){
@@ -131,4 +129,4 @@ class CreatePost extends Component {
     }
 }
 
-export default CreatePost;
+export default CreatePost

@@ -1,19 +1,38 @@
-import React, { Component } from 'react';
-import './articles.scss';
+import React, { Component } from 'react'
 
 class Articles extends Component {
-    render(){
-        return(
-            <div className="article-listing">
-                <article>
-                    <h2>This is the heading</h2>
-                    <h6>October 18, 2019 &bull; <a href="http://www.google.com" alt="Barman Variety"> 1 Comments</a></h6>
-                    <div className="post-image photo1"></div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus eos optio est molestias officiis magnam, voluptate consequatur magni impedit, nulla ipsa eligendi commodi modi aliquam accusantium, esse aperiam eveniet voluptates!</p>
-                </article>
-            </div>
-        )
+  constructor(props) {
+    super(props)
+    this.state = {
+      posts: []
     }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:5000/posts')
+      .then(response => response.json())
+      .then(data => this.setState({ posts: data }))
+  }
+
+  render(){
+    const { posts } = this.state
+    const currentURL = window.location.pathname
+    const broken = currentURL.split('/')
+    const currentPost = posts.filter(post => post._id === broken[2])
+
+    return(
+      <div className="article-listing">
+      {currentPost.map(post =>
+        <article key={post._id}>
+            <h2>{post.title}</h2>
+            <h6>{post.createdAt}</h6>
+            {/* <div className="post-image photo1"></div> */}
+            {post.content}
+        </article>
+      )} 
+      </div>
+    )
+  }
 }
 
-export default Articles;
+export default Articles

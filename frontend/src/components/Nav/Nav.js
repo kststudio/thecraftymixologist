@@ -1,22 +1,34 @@
-import React from 'react';
-import Logo from './Logo.js';
-import Menu from './Menu.js';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Nav, Navbar, NavbarBrand } from 'reactstrap'
+import logo from '../../assets/logo.svg'
+import './nav.scss'
 
-const Nav = () => {
+
+const Navigation = () => {
     return(
-        <div className="container-fluid">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                 <Logo />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+      <Navbar light expand="md" className="d-flex justify-content-between">
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <Menu />
-                </div>
-            </nav>
-        </div>
-    );
+        <NavbarBrand href="/">
+          <img className="logo" src={logo} alt="The Crafty Mixologist" />
+          <h4>The Crafty Mixologist</h4>
+        </NavbarBrand>
+
+        <Nav className="justify-content-end">
+          <div id="menu">
+            <ul className="navbar-nav d-flex justify-content-end">
+              <li className="nav-item">
+                  <Link className="nav-link" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                  <Link className="nav-link" to="/contact">Contact Us</Link>
+              </li>
+            </ul>
+          </div>
+        </Nav>
+
+      </Navbar>
+    )
 }
 
-export default Nav;
+export default Navigation

@@ -23,7 +23,7 @@ mongoose.connect(URI, {
 });
 const connection = mongoose.connection;
 connection.once('open', () => {
-    console.log('MongoDB database connction establised successfully');
+    console.log('MongoDB database connction established successfully');
 });
 
 const postRouter = require('./routes/posts');

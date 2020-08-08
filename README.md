@@ -13,12 +13,11 @@ The Crafty Mixology is a blog to showcase talented mixologists from around the w
 ## Tech Stack
 
 - HTML5
-- CSS Grids/Flexbox
+- CSS3
 - Sass
 - Nodejs
 - React
 - MongoDB
-- Jasmine
 - Font Awesome
 
 ## Getting Started

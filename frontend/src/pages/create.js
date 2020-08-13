@@ -41,7 +41,7 @@ class Create extends Component {
                 <h2>Create New Post</h2>
             </section>
             <section>
-                <form action="/post" method="POST" onSubmit={this.handleSubmitChange}>
+                <form action="/posts/create" method="POST" onSubmit={this.handleSubmitChange}>
                     <form-group>
                         <label htmlFor="title">Title</label>
                         <input type="text" name="title" id="title" onChange={ this.handleInputChange } value={ title } />

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav/Nav'
 import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
 import Feature from '../components/Feature/Feature'
+import Footer from '../components/Footer/Footer'
 
 class Home extends Component {
   constructor(){
@@ -20,6 +20,7 @@ class Home extends Component {
   }
 
   render(){
+
     return (
       <>
         <Nav />

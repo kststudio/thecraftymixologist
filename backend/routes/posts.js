@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const multer = require('multer');
+// const upload = multer({dest: 'uploads/'});
 let Post = require('../models/post.model');
 
 router.route('/').get((req, res) => {
@@ -8,16 +10,17 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/create').post((req, res) => {
+  console.log(req.file);
   const title = req.body.title;
   const author = req.body.author;
-  //const image = req.body.image;
+  const image = req.body.image;
   const content = req.body.content;
   //const date = Date.parse(req.body.date)
 
   const newPost = new Post({
     title,
     author,
-    //image,
+    image,
     content,
     //date
   });

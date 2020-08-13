@@ -1,62 +1,11 @@
+$font-heading: 'Playfair Display', Serif;
+$font-text: 'Source Sans Pro', Sans-Serif;
+
 * {
     margin: 0;
     padding: 0;
 }
-h1 {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 23px;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
+
+a:link {
+  color: red
 }
-#grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template:
-      "nav" auto
-      "header" auto
-      "section" auto
-      "footer" auto
-  }
-  .App {
-    height: 100%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-  }
-  nav {
-    grid-area: nav; 
-  }
-  header {
-    grid-area: header;
-  }
-  section {
-    grid-area: section;
-    display: flex;
-        main {
-            width: 65%;
-        }
-        aside{
-            width: 35%;
-        }
-  }
-  footer {
-    grid-area: footer;
-  }
-  @media (max-width: 720px) {
-    section {
-      grid-area: section;
-      display: flex;
-      flex-direction: column;
-          main {
-              width: 100%;
-              height: auto;
-          }
-          aside {
-              width: 100%;
-              height: auto;
-          }
-    }
-    .App {
-      height: 100%;
-    }
-  }

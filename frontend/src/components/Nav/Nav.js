@@ -1,33 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Nav, Navbar, NavbarBrand } from 'reactstrap'
+import { Nav, Navbar, NavbarBrand, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap'
 import logo from '../../assets/logo.svg'
 import './nav.scss'
 
 
-const Navigation = () => {
-    return(
-      <Navbar light expand="md" className="d-flex justify-content-between">
+const Navigation = ({isOpen, setIsOpen}) => {
 
+  const toggle = () => setIsOpen(!isOpen);
+
+    return (
+      <div>
+     <Navbar color="light" light expand="md" className="d-flex justify-content-between">
         <NavbarBrand href="/">
           <img className="logo" src={logo} alt="The Crafty Mixologist" />
-          <h4>The Crafty Mixologist</h4>
+          <h4 className="d-none d-md-inline">The Crafty Mixologist</h4>
         </NavbarBrand>
-
-        <Nav className="justify-content-end">
-          <div id="menu">
-            <ul className="navbar-nav d-flex justify-content-end">
-              <li className="nav-item">
-                  <Link className="nav-link" to="/about">About</Link>
-              </li>
-              <li className="nav-item">
-                  <Link className="nav-link" to="/contact">Contact Us</Link>
-              </li>
-            </ul>
-          </div>
-        </Nav>
-
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink className="nav-link" to="/about">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-link" to="/posts">Blog</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
       </Navbar>
+    </div>
     )
 }
 

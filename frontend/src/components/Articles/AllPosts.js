@@ -17,9 +17,9 @@ class AllPosts extends Component {
   }
 
   render(){
-    
     const { posts } = this.state
-    return(
+    
+    return (
       <>
       {posts.map(post =>
         <div className="col col-md-4" key={post._id}>
